@@ -1,0 +1,20 @@
+version: '3'
+services:
+  promtail:
+    image: grafana/promtail:2.9.2
+    command: -config.file=/etc/promtail/promtail.yml
+    ports:
+      - "9080:9080"
+    volumes:
+      - ./promtail.yml:/etc/promtail/promtail.yml
+
+  agent:
+    image: grafana/agent:v0.40.2
+    volumes:
+      - ./agent.yml:/etc/agent.yml
+    command: -config.file=/etc/agent.yml
+
+  node_exporter:
+    image: prom/node-exporter:v1.6.1
+    ports:
+      - "9100:9100" # Port for prometheus to pull metrics

@@ -1,0 +1,32 @@
+version: '3'
+services:
+  cadvisor:
+    image: google/cadvisor:v0.33.0
+    ports:
+      - "8080:8080"
+  node_exporter:
+    image: prom/node-exporter:v1.6.1
+    ports:
+      - "9100:9100"
+  graphite_exporter:
+    image: prom/graphite-exporter:v0.14.0
+    ports:
+      - "9108:9108"
+      - "9109:9109"
+
+  prometheus:
+    image: prom/prometheus:v2.47.2
+    ports:
+      - '9090:9090'
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+  grafana:
+    image: grafana/grafana:10.2.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/provisioning/:/etc/grafana/provisioning/datasources/
+      - ./grafana/dashboards-config/:/etc/grafana/provisioning/dashboards/
+      - ./grafana/dashboards-json/:/etc/dashboards/
+
+

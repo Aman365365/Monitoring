@@ -1,0 +1,64 @@
+{
+  "searchPage": {
+    "txtGoogleSearch": "//*[@name='q']",
+    "btnSubmit": "//*[@name='btnK']"
+  },
+  "Parabank" : {
+    "register_link": "//*[@id='loginPanel']/p[2]/a",
+    "register_title" : "/html/head/title",
+    "firstname" : "//*[@id='customer.firstName']",
+    "lastname" : "//*[@id='customer.lastName']",
+    "address" : "//*[@id='customer.address.street']",
+    "city": "//*[@id='customer.address.city']",
+    "state": "//*[@id='customer.address.state']",
+    "zipcode": "//*[@name='customer.address.zipCode']",
+    "phone": "//*[@id='customer.phoneNumber']",
+    "ssn": "//*[@id='customer.ssn']",
+    "username": "//*[@id='customer.username']",
+    "password": "//*[@id='customer.password']",
+    "confirm_password": "//*[@id='repeatedPassword']",
+    "register_button" : "//*[@id='customerForm']/table/tbody/tr[13]/td[2]/input",
+
+    "login_username" : "//*[@id='loginPanel']/form/div[1]/input",
+    "login_password" : "//*[@id='loginPanel']/form/div[2]/input",
+    "login" : "//*[@id='loginPanel']/form/div[3]/input",
+    "loggedin_user" : "//*[@id='leftPanel']/p"
+
+  },
+  "login":
+	
+	{
+		"userNameField": "#user-name",
+		"passwordField": "#password",
+		"logInButton": "//*[@id='login-button']"
+	},	
+	"logout":	
+	{
+		"SandwitchButton": "//*[@id='react-burger-menu-btn']",
+		"logOutButton": "//*[@id='logout_sidebar_link']"
+	},	
+	"AddToCart":
+	{
+		"AddToCart":"#add-to-cart-sauce-labs-backpack",
+		"CartClick":"//*[@id='shopping_cart_container']/a",
+		"productText":"//*[@id='item_4_title_link']/div"
+
+	},
+	"CheckOut":
+	{
+		"CheckOutproductText":"//*[@id='item_4_title_link']/div",
+		"CheckOut"  :"#checkout",
+		"UserFirstName":"//*[@id='first-name']",
+		"UserLastName":"#last-name",
+		"PostalCode":"//*[@id='postal-code']",
+		"ContinueButton":"#continue",
+		"FinishButton":"#finish",
+		"Tax": "//*[@class='summary_tax_label']",
+		"inventoryPrice": "//*[@class='inventory_item_price']",
+		"totalLabel":  "//*[@class='summary_info_label summary_total_label']",
+		"FinishedText":"//*[@id='checkout_complete_container']/h2",	
+		"BackHomeButton":"#back-to-products"
+	}
+}
+
+
